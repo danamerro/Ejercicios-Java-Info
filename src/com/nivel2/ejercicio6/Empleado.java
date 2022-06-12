@@ -1,6 +1,6 @@
 package com.nivel2.ejercicio6;
 
-public class Empleados {
+public class Empleado {
     private String nombre;
     private String apellido;
     private int dni;
@@ -39,7 +39,7 @@ public class Empleados {
     }
 
 
-    public Empleados(String nombre,String apellido,int dni,int horasTrabajadas,int valorPorHora){
+    public Empleado(String nombre, String apellido, int dni, int horasTrabajadas, int valorPorHora){
         this.nombre=nombre;
         this.apellido=apellido;
         this.dni=dni;
@@ -47,10 +47,13 @@ public class Empleados {
         this.valorPorHora=valorPorHora;
     }
 
-    public Empleados(){
+    public Empleado(){
 
     }
 
+    public int calcularSueldo(){
+        return this.horasTrabajadas*this.valorPorHora;
+    }
 
 }
 
